@@ -1,0 +1,27 @@
+.filter {
+  /* position: fixed; */
+  padding: 1rem 1rem 0rem 1rem;
+  width: 13rem;
+}
+.heading {
+  padding-bottom: 0.3rem;
+  margin-left: 1.5rem;
+  text-decoration: underline;
+  padding-top: 1rem;
+}
+.checkboxes {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 1.5rem;
+}
+.checkboxes label {
+  margin-left: 0.6rem;
+}
+input,
+label {
+  cursor: pointer;
+}
+.individual-filter {
+  margin-top: 1rem;
+  border: 1px solid #edebef;
+}
