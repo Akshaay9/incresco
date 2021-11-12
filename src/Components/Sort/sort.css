@@ -1,0 +1,25 @@
+.sort {
+  /* margin-top: 15rem; */
+  /* position: absolute; */
+  right: 8rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  margin-left: 15rem;
+    margin-top: 6rem;
+}
+.sort div {
+  margin-right: 1rem;
+}
+.sort select {
+  padding-right: 4rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+select,
+option {
+  cursor: pointer;
+}

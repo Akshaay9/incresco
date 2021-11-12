@@ -4,7 +4,7 @@ import GenderFilter from "./Filter";
 
 function index() {
   return (
-    <div>
+    <>
       <div className="filter">
         <h4 className="heading">FILTERS</h4>
         <div className="checkboxes">
@@ -21,7 +21,7 @@ function index() {
         </div>
         <GenderFilter />
       </div>
-    </div>
+    </>
   );
 }
 

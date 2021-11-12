@@ -1,8 +1,17 @@
 .filter {
   /* position: fixed; */
-  padding: 1rem 1rem 0rem 1rem;
+  padding: 0rem 1rem 0rem 1rem;
   width: 13rem;
+  position: fixed;
+  top: 100px;
+  left: 10px;
+  bottom: 10px;
+  overflow-y: scroll;
+  max-height: 100%;
+  transform: translateX(0%);
+  /* border-top: 1px solid #edebef; */
 }
+
 .heading {
   padding-bottom: 0.3rem;
   margin-left: 1.5rem;
@@ -17,7 +26,7 @@
 .checkboxes label {
   margin-left: 0.6rem;
 }
-input,
+input[type="checkbox"],
 label {
   cursor: pointer;
 }

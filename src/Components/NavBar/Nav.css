@@ -16,6 +16,12 @@
 .nav {
   padding: 1rem 1rem 1rem 1rem;
   cursor: pointer;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: white;
+  /* opacity: 1; */
+
 }
 .nav_left {
   width: 50%;
@@ -38,5 +44,5 @@
   height: 1.5rem;
 }
 input::placeholder {
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
