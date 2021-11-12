@@ -10,8 +10,6 @@ function GenderFilter() {
   } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
-  console.log(gender);
-
   return (
     <>
       <div className="individual-filter">

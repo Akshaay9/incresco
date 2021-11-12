@@ -1,5 +1,3 @@
-import produce from "@reduxjs/toolkit/node_modules/immer";
-
 export const sortProducts = (products, sortData) => {
   if (products === undefined || products === []) return [];
   let { price, rating, year } = sortData;
@@ -34,8 +32,6 @@ export const filterProducts = (products, filterData) => {
   let filteredData = JSON.parse(JSON.stringify(products));
   let { gender, category, brand } = filterData;
 
-  console.log(category);
-
   /// gender filter
   if (gender !== "") {
     filteredData = filteredData.filter(
@@ -59,4 +55,27 @@ export const filterProducts = (products, filterData) => {
   }
 
   return filteredData;
+};
+
+/// filter by search
+export const searchFilter = (products, searchData) => {
+  if (products === undefined || products === []) return [];
+  let searchedproducts = JSON.parse(JSON.stringify(products));
+
+  if (searchData !== "") {
+    searchedproducts = searchedproducts.filter((ele) => {
+      return (
+        ele.product
+          .toString()
+          .toLowerCase()
+          .includes(searchData.toString().toLowerCase()) ||
+        ele.productName
+          .toString()
+          .toLowerCase()
+          .includes(searchData.toString().toLowerCase())
+      );
+    });
+  }
+
+  return searchedproducts;
 };

@@ -86,6 +86,7 @@ export const productSlice = createSlice({
 
     // search by text
     searchByText: (state, { payload }) => {
+      console.log("called");
       state.searchInput = payload;
     },
   },
