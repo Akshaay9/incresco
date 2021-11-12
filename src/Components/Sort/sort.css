@@ -1,14 +1,14 @@
 .sort {
-  /* margin-top: 15rem; */
-  /* position: absolute; */
+
+  
   right: 8rem;
   margin-top: 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 40%;
-  margin-left: 15rem;
+  width: 55%;
+  margin-left: 17rem;
     margin-top: 6rem;
 }
 .sort div {
@@ -22,4 +22,7 @@
 select,
 option {
   cursor: pointer;
+}
+.sort button {
+  margin: 0rem 0rem 0rem;
 }

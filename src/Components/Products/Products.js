@@ -5,10 +5,9 @@ import "./products.css";
 
 function Products() {
   const { products } = useSelector((state) => state.products);
-  console.log(products);
+
   return (
     <div>
-   
       <div className="product-grid">
         {products.map((ele) => (
           <IndividualProduct ele={ele} />

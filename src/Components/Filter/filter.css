@@ -1,7 +1,7 @@
 .filter {
   /* position: fixed; */
   padding: 0rem 1rem 0rem 1rem;
-  width: 13rem;
+  width: 15rem;
   position: fixed;
   top: 100px;
   left: 10px;
@@ -33,4 +33,26 @@ label {
 .individual-filter {
   margin-top: 1rem;
   border: 1px solid #edebef;
+}
+.checkboxes span {
+  margin-left: 0.6rem;
+}
+.filter button,
+.sort button {
+  display: block;
+  margin: 1rem 1rem 0rem;
+  padding: 0.3rem 2rem;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  border: 1px solid black;
+}
+.filter button:hover,
+.sort button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
 }
