@@ -37,3 +37,13 @@
   text-decoration: line-through;
   color: rgb(107, 102, 102);
 }
+
+.emptyCart {
+  width: 250%;
+  display: block !important;
+  margin-left: 100%;
+}
+.loading {
+  display: block;
+  margin-left: 150%;
+}
