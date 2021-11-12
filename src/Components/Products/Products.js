@@ -4,7 +4,9 @@ import IndividualProduct from "./IndividualProduct";
 import "./products.css";
 
 function Products() {
-  const { products } = useSelector((state) => state.products);
+  const { products, sortData, filterData } = useSelector(
+    (state) => state.products
+  );
 
   return (
     <div>

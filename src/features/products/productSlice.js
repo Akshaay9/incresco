@@ -10,7 +10,7 @@ const initialState = {
     year: "",
   },
   filterData: {
-    gender: [],
+    gender: "",
     category: [],
     brand: [],
   },
@@ -34,17 +34,60 @@ export const getAllProducts = createAsyncThunk(
 export const productSlice = createSlice({
   name: "products",
   initialState,
-  reducer: {
+  reducers: {
     //   sort reducers
-    sortByPrice: (state, { payload }) => {},
-    sortByRating: (state, { payload }) => {},
-    sortByYear: (state, { payload }) => {},
-    // filter reducers
-    filterByGender: (state, { payload }) => {},
-    filterByCategory: (state, { payload }) => {},
-    filterByBrand: (state, { payload }) => {},
+    sort: (state, { payload }) => {
+      let { sortCategory, sortValue } = payload;
+      state.sortData[sortCategory] = sortValue;
+    },
+    //clear sort
+    clearSort: (state) => {
+      state.sortData = {
+        price: "",
+        rating: "",
+        year: "",
+      };
+    },
+    // filter reducers for gender
+    filterByGender: (state, { payload }) => {
+      let { filterCategory, filterValue } = payload;
+      state.filterData[filterCategory] = filterValue;
+    },
+    // filter by brand and category
+    filter: (state, { payload }) => {
+      let { filterCategory, filterValue } = payload;
+
+      let filteredStateCategory = state.filterData[filterCategory];
+
+      filteredStateCategory = filteredStateCategory.includes(filterValue)
+        ? filteredStateCategory.filter((ele) => ele !== filterValue)
+        : [...filteredStateCategory, filterValue];
+
+      state.filterData[filterCategory] = filteredStateCategory;
+    },
+    // clear all filter
+    clearFilter: (state) => {
+      state.filterData = {
+        gender: "",
+        category: [],
+        brand: [],
+      };
+    },
+
+    // select all filter
+    selectAllFilter: (state, { payload }) => {
+      let { gender, category, brand } = payload;
+      state.filterData = {
+        gender,
+        category,
+        brand,
+      };
+    },
+
     // search by text
-    searchByText: (state, { payload }) => {},
+    searchByText: (state, { payload }) => {
+      state.searchInput = payload;
+    },
   },
   extraReducers: {
     [getAllProducts.pending]: (state, action) => {
@@ -57,12 +100,12 @@ export const productSlice = createSlice({
   },
 });
 export const {
-  sortByPrice,
-  sortByRating,
-  sortByYear,
+  sort,
+  clearSort,
   filterByGender,
-  filterByCategory,
-  filterByBrand,
+  filter,
+  clearFilter,
+  selectAllFilter,
   searchByText,
 } = productSlice.actions;
 
