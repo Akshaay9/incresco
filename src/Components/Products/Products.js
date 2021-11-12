@@ -10,10 +10,15 @@ function Products() {
   const { loading, products, sortData, filterData, searchInput } = useSelector(
     (state) => state.products
   );
+  
 
+
+  // sorting, filtering and searching products
   let sortedProducts = sortProducts(products, sortData);
   let filteredProducts = filterProducts(sortedProducts, filterData);
   let searchedData = searchFilter(filteredProducts, searchInput);
+
+
 
   return (
     <div>
