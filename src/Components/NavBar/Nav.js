@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Search from "../Search/Search";
-import "./Nav.css"
+import "./Nav.css";
 
 function Nav() {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className="nav">
       <div className="logo">
@@ -11,7 +12,17 @@ function Nav() {
           alt=""
         />
       </div>
-      <div className="nav_left">
+      <div className="mobile">
+        <div
+          className={`ham ${modalOpen ? "bend" : ""}`}
+          onClick={() => setModalOpen((e) => !e)}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div className={`nav_left ${modalOpen ? "" : "close-nav"}`}>
         <ul>
           <li>Men</li>
           <li>Women</li>

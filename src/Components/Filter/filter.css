@@ -58,7 +58,7 @@ label {
   color: black;
   border: 1px solid black;
 }
-.fa-forward {
+.fa-backward   {
   position: fixed;
   left: 80%;
   font-size: 2rem;
@@ -66,7 +66,7 @@ label {
 }
 .filter-btn {
   position: fixed;
-  top: 150px;
+  top: 180px;
   left: 0px;
   display: none;
 }
@@ -79,7 +79,7 @@ label {
     width: 100%;
     top: 91px;
   }
-  .fa-forward {
+  .fa-backward {
     display: block;
   }
   .showFilter {

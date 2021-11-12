@@ -37,7 +37,7 @@ function Index() {
       </button>
       <div className={`filter ${showFilter ? "showFilter" : ""}`}>
         <h4 className="heading">FILTERS</h4>
-        <i class="fas fa-forward" onClick={() => hideFilter()}></i>
+        <i class="fas fa-backward" onClick={() => hideFilter()}></i>
 
         <button onClick={() => dispatch(clearFilter())}>clear All</button>
         <button onClick={() => selectAllFilterHandler()}>Select All</button>
