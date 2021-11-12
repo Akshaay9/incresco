@@ -1,6 +1,4 @@
 .sort {
-
-  
   right: 8rem;
   margin-top: 1rem;
   cursor: pointer;
@@ -9,7 +7,7 @@
   justify-content: space-between;
   width: 55%;
   margin-left: 17rem;
-    margin-top: 6rem;
+  margin-top: 6rem;
 }
 .sort div {
   margin-right: 1rem;
@@ -25,4 +23,15 @@ option {
 }
 .sort button {
   margin: 0rem 0rem 0rem;
+}
+@media screen and (max-width: 720px) {
+  .sort {
+    margin-top: 6rem;
+    right: 0px;
+    margin-left: 0rem;
+    width: 100%;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }

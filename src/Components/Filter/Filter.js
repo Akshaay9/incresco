@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filter, filterByGender } from "../../features/products/productSlice";
 import { getAllFilterCategory } from "../../utils/productUtils";
@@ -12,8 +12,10 @@ function GenderFilter() {
 
   return (
     <>
+    
       <div className="individual-filter">
         <h4 className="heading">Gender</h4>
+
         {getAllFilterCategory(products, "gender").map((ele) => (
           <div className="checkboxes">
             <label>

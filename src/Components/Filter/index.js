@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./filter.css";
 import Filters from "./Filter";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,10 +21,24 @@ function Index() {
     dispatch(selectAllFilter(data));
   };
 
+  const [showFilter, setShowFilter] = useState(false);
+
+  const hideFilter = () => {
+    setShowFilter((ele) => false);
+  };
+  const showFilterHandler = () => {
+    setShowFilter((ele) => true);
+  };
+
   return (
     <>
-      <div className="filter">
+      <button className="filter-btn" onClick={() => showFilterHandler()}>
+        show filter
+      </button>
+      <div className={`filter ${showFilter ? "showFilter" : ""}`}>
         <h4 className="heading">FILTERS</h4>
+        <i class="fas fa-forward" onClick={() => hideFilter()}></i>
+
         <button onClick={() => dispatch(clearFilter())}>clear All</button>
         <button onClick={() => selectAllFilterHandler()}>Select All</button>
         <Filters />
