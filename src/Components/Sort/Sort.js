@@ -6,6 +6,9 @@ function Sort() {
     <div className="sort">
       <div>
         <select name="" id="">
+          <option value="" disabled selected hidden>
+            Select your option
+          </option>
           <option value="1">hello eve</option>
           <option value="1">hello eve</option>
           <option value="1">hello eve</option>

@@ -1,0 +1,39 @@
+.product-grid {
+  width: 80%;
+  margin-left: 15rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.product img {
+  width: 100%;
+  object-fit: contain;
+}
+.product h5 {
+  /* border: 1px solid red; */
+  padding: 0.5rem 0rem 0.3rem 0rem;
+}
+.product-brand {
+  font-size: 14px;
+  color: rgb(82, 78, 78);
+}
+.product .price {
+  display: flex;
+  align-items: center;
+  margin-top: 0.7rem;
+}
+.product .price > p {
+  font-size: 14px;
+  margin-left: 0.5rem;
+}
+.product .price p:nth-child(3) {
+  color: red;
+}
+.product .price p:nth-child(2) {
+  text-decoration: line-through;
+  color: rgb(107, 102, 102);
+}
