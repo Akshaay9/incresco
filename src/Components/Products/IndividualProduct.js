@@ -1,5 +1,5 @@
 import React from "react";
-import "./products.css"
+import "./products.css";
 
 function IndividualProduct({ ele }) {
   return (
@@ -7,6 +7,7 @@ function IndividualProduct({ ele }) {
       <img src={ele?.searchImage} alt="" />
       <h5>{ele?.productName}</h5>
       <p className="product-brand">{ele.brand}</p>
+      <p>{Math.floor(ele.rating)}</p>
       <div className="price">
         <h4>Rs.{ele.price}</h4>
         <p>Rs.{ele.mrp}</p>
