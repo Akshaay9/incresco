@@ -47,6 +47,19 @@
   display: block;
   margin-left: 150%;
 }
+.product-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-line p i {
+  color: gold;
+  padding-left: 0.2rem;
+}
+.product-line p:nth-child(2) {
+  color: rgb(121, 116, 116);
+  font-size: 14px;
+}
 @media screen and (max-width: 720px) {
   .product-grid {
     width: 98%;

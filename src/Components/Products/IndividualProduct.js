@@ -6,8 +6,14 @@ function IndividualProduct({ ele }) {
     <div className="product">
       <img src={ele?.searchImage} alt="" />
       <h5>{ele?.productName}</h5>
-      <p className="product-brand">{ele.brand}</p>
-      <p>{Math.floor(ele.rating)}</p>
+      <div className="product-line">
+        <p className="product-brand">{ele.brand}</p>
+        <p>
+          {Math.floor(ele.rating)}
+          <i class="fas fa-star"></i>
+        </p>
+      </div>
+
       <div className="price">
         <h4>Rs.{ele.price}</h4>
         <p>Rs.{ele.mrp}</p>
