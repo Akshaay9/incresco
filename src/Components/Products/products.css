@@ -52,4 +52,13 @@
     width: 98%;
     margin-left: 0em;
   }
+  .loading {
+    display: block;
+    margin-left: 10%;
+  }
+  .emptyCart {
+    width: 70%;
+    margin-left: 5rem;
+    margin-top: 3rem;
+  }
 }
