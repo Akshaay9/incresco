@@ -15,6 +15,7 @@ const initialState = {
     brand: [],
   },
   searchInput: "",
+  category:[]
 };
 
 export const getAllProducts = createAsyncThunk(
@@ -97,6 +98,7 @@ export const productSlice = createSlice({
     [getAllProducts.fulfilled]: (state, { payload }) => {
       state.loading = false;
       state.products = payload;
+      
     },
   },
 });

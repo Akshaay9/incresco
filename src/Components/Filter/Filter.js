@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filter, filterByGender } from "../../features/products/productSlice";
+
 import { getAllFilterCategory } from "../../utils/productUtils";
 
 function GenderFilter() {

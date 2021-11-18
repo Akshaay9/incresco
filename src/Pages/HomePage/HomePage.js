@@ -10,7 +10,7 @@ function HomePage() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getAllProducts(`https://demo7242716.mockable.io/products`));
+    dispatch(getAllProducts(`https://demo7303877.mockable.io/`));
   }, []);
 
   return (
