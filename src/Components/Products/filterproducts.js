@@ -3,10 +3,6 @@ export const sortProducts = (products, sortData) => {
   let { price, rating, year } = sortData;
   let sortedData = JSON.parse(JSON.stringify(products));
 
-
-
-
-
   //   sort by price
   if (price !== "") {
     if (price === "price_low_to_high") {
@@ -44,9 +40,6 @@ export const filterProducts = (products, filterData) => {
     );
   }
 
-
-
- 
   // category filter
   if (category.length > 0) {
     filteredData = filteredData.filter((ele) =>
