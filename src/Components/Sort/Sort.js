@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearSort, sort } from "../../features/products/productSlice";
 import { getAllFilterCategory } from "../../utils/productUtils";
@@ -10,6 +10,11 @@ function Sort() {
     sortData: { price, rating, year },
   } = useSelector((state) => state.products);
   const dispatch = useDispatch();
+
+  const getAllYears = useMemo(() => {
+    let data = getAllFilterCategory(products, "year");
+    return data;
+  }, [products]);
 
   return (
     <div className="sort">
@@ -71,7 +76,7 @@ function Sort() {
           <option value="" disabled selected={year === ""} hidden>
             sort by year
           </option>
-          {getAllFilterCategory(products, "year").map((ele) => (
+          {getAllYears.map((ele) => (
             <option value={ele} selected={year === ele}>
               {ele}
             </option>

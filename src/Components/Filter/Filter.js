@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filter, filterByGender } from "../../features/products/productSlice";
+
 import { getAllFilterCategory } from "../../utils/productUtils";
 
 function GenderFilter() {
@@ -10,13 +11,30 @@ function GenderFilter() {
   } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
+  const getAllGenderCategories = useMemo(() => {
+    if (products.length === 0) return [];
+    let data = getAllFilterCategory(products, "gender");
+    return data;
+  }, [products]);
+
+  const getAllBrandCategories = useMemo(() => {
+    if (products.length === 0) return [];
+    let data = getAllFilterCategory(products, "brand");
+    return data;
+  }, [products]);
+
+  const getAllCategories = useMemo(() => {
+    if (products.length === 0) return [];
+    let data = getAllFilterCategory(products, "category");
+    return data;
+  }, [products]);
+
   return (
     <>
-    
       <div className="individual-filter">
         <h4 className="heading">Gender</h4>
 
-        {getAllFilterCategory(products, "gender").map((ele) => (
+        {getAllGenderCategories.map((ele) => (
           <div className="checkboxes">
             <label>
               <input
@@ -41,7 +59,7 @@ function GenderFilter() {
       </div>
       <div className="individual-filter">
         <h4 className="heading">Category</h4>
-        {getAllFilterCategory(products, "category").map((ele, i) => (
+        {getAllCategories.map((ele, i) => (
           <div className="checkboxes">
             <input
               type="checkbox"
@@ -64,7 +82,7 @@ function GenderFilter() {
       </div>
       <div className="individual-filter">
         <h4 className="heading">Brand</h4>
-        {getAllFilterCategory(products, "brand").map((ele, i) => (
+        {getAllBrandCategories.map((ele, i) => (
           <div className="checkboxes">
             <input
               type="checkbox"

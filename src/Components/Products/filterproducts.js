@@ -1,4 +1,5 @@
 export const sortProducts = (products, sortData) => {
+  console.log("ran roduct sort");
   if (products === undefined || products === []) return [];
   let { price, rating, year } = sortData;
   let sortedData = JSON.parse(JSON.stringify(products));
@@ -28,6 +29,7 @@ export const sortProducts = (products, sortData) => {
 
 // filter products
 export const filterProducts = (products, filterData) => {
+  console.log("ran filter products");
   if (products === undefined || products === []) return [];
   let filteredData = JSON.parse(JSON.stringify(products));
   let { gender, category, brand } = filterData;
@@ -59,6 +61,7 @@ export const filterProducts = (products, filterData) => {
 
 /// filter by search
 export const searchFilter = (products, searchData) => {
+  console.log("ran search products");
   if (products === undefined || products === []) return [];
   let searchedproducts = JSON.parse(JSON.stringify(products));
 

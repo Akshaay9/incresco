@@ -15,6 +15,7 @@ const initialState = {
     brand: [],
   },
   searchInput: "",
+  category: [],
 };
 
 export const getAllProducts = createAsyncThunk(
@@ -22,7 +23,6 @@ export const getAllProducts = createAsyncThunk(
   async (url, { rejectWithValue }) => {
     try {
       const data = await axios.get(url);
-      console.log(data.data);
 
       return data.data.products;
     } catch (error) {
@@ -86,7 +86,6 @@ export const productSlice = createSlice({
 
     // search by text
     searchByText: (state, { payload }) => {
-      console.log("called");
       state.searchInput = payload;
     },
   },
