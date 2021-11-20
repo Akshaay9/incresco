@@ -1,0 +1,20 @@
+.paginate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paginate button {
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+.paginate button {
+  padding: 0.2rem 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+}
+.btn-selected {
+  padding: 0.5rem 1rem !important;
+}
+
