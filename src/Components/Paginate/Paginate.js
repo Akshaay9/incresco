@@ -9,6 +9,7 @@ function Paginate({ length = 0, setPaginateNumbers, paginateNumbers }) {
       start: num * 12 - 12,
       end: num * 12,
     }));
+    window.scrollTo(0, 0);
   };
 
   return (
